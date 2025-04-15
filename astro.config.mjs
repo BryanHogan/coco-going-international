@@ -6,19 +6,33 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'CoCo International',
+			social: [{ icon: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/codeandcontext/' }],
+			customCss: [
+				'./src/styles/custom.css',
+			],
+			logo: {
+				src: "./src/assets/CoCo-Logo.svg",
+			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Incomings',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Incomings Information', link: '/incomings/exchange-at-coco' },
+						{ label: 'Courses', link: '/incomings/courses' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Outgoings',
+					items: [
+						{ label: 'Outgoings Information', link: '/outgoings/semester-abroad' },
+					],
+				},
+				{
+					label: 'More',
+					items: [
+						{ label: 'More', link: '/more/more' },
+					],
 				},
 			],
 		}),
